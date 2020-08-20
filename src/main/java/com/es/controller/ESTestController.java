@@ -54,10 +54,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -168,12 +165,12 @@ public class ESTestController {
     public ResponseBean insertBulkData(@RequestParam String indexName) {
         BulkRequest bulkRequest = new BulkRequest();
         SysUser user = new SysUser();
-        for (int i = 1; i <= 11000; i++) {
+        for (int i = 1; i <= 10; i++) {
             user.setName("吴六" + i);
             user.setAddress("北京" + i);
             user.setAge(i);
             user.setMoney(new Double(i));
-            user.setBirthday("2019-11-05");
+            user.setBirthday(new Date());
 
             String userJson = JSONObject.toJSONString(user);
             IndexRequest indexRequest = new IndexRequest(indexName);

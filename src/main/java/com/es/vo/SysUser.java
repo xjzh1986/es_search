@@ -3,6 +3,8 @@ package com.es.vo;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @Description:
  * @Param:
@@ -15,11 +17,19 @@ public class SysUser {
 
     private String name;
 
-    private int age;
+    private Integer age;
 
     private Double money;
 
     private String address;
 
-    private String birthday;
+    private Date birthday;
+
+    private Long birthdayLong;
+
+    private Integer type;
+
+
+
+
 }
