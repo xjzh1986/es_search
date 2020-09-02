@@ -170,7 +170,7 @@ public class ESTestController {
             user.setAddress("北京" + i);
             user.setAge(i);
             user.setMoney(new Double(i));
-            user.setBirthday(new Date());
+            user.setBirthday("");
 
             String userJson = JSONObject.toJSONString(user);
             IndexRequest indexRequest = new IndexRequest(indexName);

@@ -23,11 +23,15 @@ public class SysUser {
 
     private String address;
 
-    private Date birthday;
+    private String birthday;
 
     private Long birthdayLong;
 
     private Integer type;
+
+    private String level;
+
+    private String info;
 
 
 
